@@ -6,5 +6,11 @@
     top: 0;
     z-index: 1000; /* Establece un valor alto para asegurarte de que esté por encima */
   }
+
+  nav img{
+    width: 25%;
+    padding: 5px;
+    margin-left: 50%;
+}
   
   

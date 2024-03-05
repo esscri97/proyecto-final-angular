@@ -12,5 +12,16 @@
     padding: 5px;
     margin-left: 50%;
 }
+
+.btn-outline-success{
+  background-color: #f0e77b;
+  color: #4e738a;
+  border: 0;
+
+  &:hover{
+    background-color: #4e738a;
+    color: #f0e77b;
+  }
+}
   
   

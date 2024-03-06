@@ -4,6 +4,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { UsersComponent } from './pages/users/users.component';
 import { CalculadoraComponent } from './pages/calculadora/calculadora.component';
 import { AdivinanzaComponent } from './pages/adivinanza/adivinanza.component';
+import { StoreComponent } from './pages/store/store.component';
+import { DogComponent } from './pages/dog/dog.component';
 
 export const routes: Routes = [
 
@@ -13,6 +15,8 @@ export const routes: Routes = [
 {path: 'users', component:UsersComponent, title:'Users'},
 {path: 'calculadora', component:CalculadoraComponent, title:'Calculadora'},
 {path: 'adivinanza', component:AdivinanzaComponent, title:'Adivinanza'},
+{path: 'store', component:StoreComponent, title:'Store'},
+{path: 'dog', component:DogComponent, title:'Dog'},
 
 {path: '**',redirectTo: '',pathMatch:'full' },
 

@@ -1,0 +1,9 @@
+<div class="productos">
+    @for(producto of productos; track producto.id){
+        <div  class="producto-card">
+            <img [src]="producto.imagen" alt="{{producto.titulo}}">
+            <b>{{producto.titulo}}</b>
+            <p>{{producto.precio}}€</p>
+        </div>
+    }
+    

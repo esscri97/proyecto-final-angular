@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="row">
+    <!-- Add Product Button -->
+    
+  </div>
+
+  <!-- Products Section -->
+  <div class="row">
+    <div class="col-12 col-md-6 col-lg-3" *ngFor="let product of products">
+      <app-product
+        [product]="product"
+        (edit)="toggleEditPopup($event)"
+        (delete)="toggleDeletePopup($event)"
+      ></app-product>
+    </div>
+  </div>
+
+  <!-- Paginator -->
+  <div class="row">
+    <div class="col-12">
+      <p-paginator
+        [rows]="rows"
+        [totalRecords]="totalRecords"
+        [rowsPerPageOptions]="[6, 12, 20]"
+        (onPageChange)="onPageChange($event)"
+        #paginator
+      ></p-paginator>
+    </div>
+  </div>
+</div>
+
+<!-- Edit Product -->
+<app-edit-popup
+
+  [product]="selectedProduct"
+  [(display)]="displayEditPopup"
+  (confirm)="onConfirmEdit($event)"
+  header="Edit Product"
+></app-edit-popup>
+
+<!-- Add Product -->
+<app-edit-popup
+  [(display)]="displayAddPopup"
+  (confirm)="onConfirmAdd($event)"
+  header="Add Product"
+></app-edit-popup>
+
+<div class="col-12">
+  <button
+    type="button"
+    class="btn btn-primary"
+    (click)="toggleAddPopup()"
+  >
+    <i class="pi pi-plus"></i> Add Product
+  </button>
+</div>

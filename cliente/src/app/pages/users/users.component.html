@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>users</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="row d-flex justify-content-center">
+            @if(guapo){
+            <p class="d-flex justify-content-center">Hola guapo, {{nombre2}}</p>
+            }@else {
+            <p class="d-flex justify-content-center">Hola fea, {{nombre}}</p>
+            <button class="btn btn-outline-success col-2 mb-5" (click)="guapo = true">Hacerse guapo</button>
+            }
+
+
+            <h3 class="d-flex justify-content-center">Lista de usuarios del array</h3>
+
+            <ul class="d-grid justify-content-center">
+                @for (user of users; track user.id){
+                <li>{{user.name}}</li>
+                }
+            </ul>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
